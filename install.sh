@@ -14,7 +14,9 @@ backup() {
 
 symlink() {
   file=$1
+  echo $file
   link=$2
+  echo $link
   if [ ! -e "$link" ]; then
     echo "-----> Symlinking your new $link"
     ln -s $file $link
